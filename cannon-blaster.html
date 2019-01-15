@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cannon Blaster</title>
+		<meta name="author" content="Marvin Tran">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+		<style type="text/css">
+			/* I wanted it to take up the entire screen real estate,
+			 * but for some reason there was some extra margin causing there to be scrollbars.
+			 * I never figured out what was causing it, so I had to make due with this.
+			 */
+			body{
+				color: #61443e;
+				font-family:Monospace;
+				font-size:13px;
+				text-align:center;
+				/* there was some strange white bar so i just made it the same colour as
+				renderer.setClearColor( 0xAAAAAA, 1.0 ); which was the value in the game */
+				background-color: #AAAAAA;
+				/* margin:0px and overflow:hidden to make the game fill up the entire screen*/
+				margin: 0px;
+				overflow: hidden;
+			}
+			#info {
+					position: absolute;
+					top: 0px; width: 100%;
+					padding: 5px;
+			}
+		</style>
+
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/three.min.js"></script>
+		<script src="js/Detector.js"></script>
+		<script src="js/CanvasRenderer.js"></script>
+		<script src="js/Projector.js"></script>
+		<script src="js/OrbitControls.js"></script>
+		<script src="js/dat.gui.min.js"></script>
+		<script src="js/KeyboardState.js"></script>
+
+		<script src="js/physi.js"></script>
+		<script src="js/Tween.js"></script>
+		<script src="js/rhill-voronoi-core.min.js"></script>
+
+	</head>
+
+	<body>
+		<div id="info"><span style="color:black;text-decoration:underline">Destroy as many walls as you can before the sun sets!</span><br>
+			Press <span style="color:red">WASD</span> to move the cannon up, down, left and right<br>
+			Press <span style="color:red">R</span> to increase power of shot, and <span style="color:red">F</span> to decrease power of shot<br>
+			Press <span style="color:red">V</span> to recenter the camera on the cannon
+			<p id="points" style="color:red">Points: 0</p><p id="time">Time Remaining: </p>
+		</div>
+		<div id="canvas">
+			<br><br><br><br>
+				<script src="the-game.js"> </script>
+				<br><br><br><br><br><br><br><br><br>Loading...
+		</div>
+	</body>
+</html>
